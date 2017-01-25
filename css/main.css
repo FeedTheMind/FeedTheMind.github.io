@@ -1,3 +1,52 @@
+/****************
+General
+****************/
 body {
   font-family: 'Lora', Georgia, sans-serif;
 }
+
+p {
+  text-align: justify;
+}
+
+li {
+  text-decoration: none;
+}
+
+/****************
+Navigation
+****************/
+.slideDown {
+  position: absolute;
+  top: 1.5em;
+  left: 0;
+  margin-top: 10px;
+  background: transparent;
+  border: 0;
+}
+
+.menuList {
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  top: 4.5em;
+  left: 0;
+  font-size: 1em;
+  list-style: none;
+  z-index: 2;
+}
+
+.nav-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  box-shadow: 0 0px 30px rgba(0, 0, 0, .27);
+  z-index: 1000;
+  background: #fff;
+}
+
+/****************
+Queries
+****************/
