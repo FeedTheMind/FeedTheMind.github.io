@@ -29,7 +29,7 @@ Navigation
 ****************/
 .slideDown {
   position: absolute;
-  top: .4em;
+  padding: .5em .5em 0 .5em;
   left: 0;
   margin-top: 10px;
   background: transparent;
@@ -50,14 +50,14 @@ Navigation
   position: fixed;
   top: 0;
   bottom: 0;
-  right: 0;
+  left: 0;
   width: 150px;
   box-shadow: 0 0px 30px rgba(0, 0, 0, .27);
   z-index: 1000;
   background: #fff;
 }
 
-@media (max-width: 975px) {
+@media screen and (max-width: 975px) {
   .mainContainer {
     padding-top: 4em;
   }
@@ -103,6 +103,19 @@ Navigation
     top: 12%;
     left: 0;
     right: 0;
+  }
+}
+
+/****************
+.mainContainer
+****************/
+.mainContainer {
+  margin-left: 10em;
+}
+
+@media screen and (max-width: 975px) {
+  .mainContainer {
+    margin-left: 0;
   }
 }
 

@@ -1,4 +1,5 @@
 'use strict';
+
 const buttonSlide = document.querySelector('.slideDown');
 
 function hamburgerClick() {
@@ -21,3 +22,17 @@ function hamburgerClick() {
 }
 
 buttonSlide.addEventListener('click', hamburgerClick);
+
+// Determine window size
+  // Fix menu from disappearing when resized
+
+window.addEventListener('resize', () => {
+  const menuList = document.querySelector('.menuList');
+  let windowWidth = window.innerWidth;
+
+  if (windowWidth >= 975) {
+    menuList.style.display = 'block';
+  } else {
+    menuList.style.display = 'none';
+  }
+});
