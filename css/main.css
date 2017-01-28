@@ -19,9 +19,9 @@ p {
 
 a,
 a:hover,
-li,
-li:hover {
+a:focus {
   text-decoration: none;
+  outline: none;
 }
 
 /****************
@@ -31,7 +31,7 @@ Navigation
   position: absolute;
   padding: .5em .5em 0 .5em;
   left: 0;
-  margin-top: 10px;
+  top: .6em;
   background: transparent;
   border: 0;
   display:none;
@@ -42,8 +42,9 @@ Navigation
   padding: 8px;
   position: absolute;
   top: 4.5em;
-  font-size: 1em;
   list-style: none;
+  display: block;
+  width: 100%;
 }
 
 .navMenu {
@@ -57,9 +58,44 @@ Navigation
   background: #fff;
 }
 
-@media screen and (max-width: 975px) {
+.navItem {
+  font-family: 'Alice', Georgia, sans-serif;
+}
+
+.navLink {
+  padding: 5px 5px 0 5px;
+  letter-spacing: .07em;
+  font-size: 1.2em;
+  transition: .4s;
+  color: rgba(153, 153, 153, 1);
+  width: 100%;
+  display: block;
+}
+
+.navLink:hover,
+.navLink:focus {
+  color: royalblue;
+  letter-spacing: .14em;
+}
+
+.mainText {
+  transition: .8s;
+  letter-spacing: .07em;
+  font-weight: bold;
+  color: firebrick;
+  padding-left: 5px;
+  width: 100%;
+  display: block;
+}
+
+.mainText:hover,
+.mainText:focus {
+    letter-spacing: .14em;
+  }
+
+@media screen and (max-width: 60.9rem) {
   .mainContainer {
-    padding-top: 4em;
+    padding-top: 3em;
   }
 
   .slideDown {
@@ -71,17 +107,13 @@ Navigation
     display: none;
   }
 
-  .menuList li {
-    padding: .25em .4em 0 0;
-  }
-
   .navMenu {
     left: 0;
     width: 100%;
     height: 50px;
   }
 
-  .mainImage {
+  .mainText {
     float: right;
     padding-top: 1rem;
     width: 10em;
@@ -94,16 +126,50 @@ Navigation
     left: 0;
     right: 0;
     display: none;
-    background-color: rgba(255, 255, 255, .96);
+    background: rgba(255, 255, 255, .96);
+    text-align: center;
     height: 100%;
   }
 
   .menuList li {
+    padding: .25em .4em 0 0;
     position: relative;
     top: 12%;
     left: 0;
     right: 0;
   }
+}
+
+/****************
+.slickSlider
+****************/
+.slideContainer {
+  margin-left: -1em;
+}
+
+.slickSlider img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slickSlider:hover {
+  cursor: w-resize;
+}
+
+.slickSlider {
+  /* Make relative so "text" can be positioned */
+    /* Or use drawing software to alter personReading */
+  position: relative;
+}
+
+.textForImages {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  color: #fff;
+  font-size: 20em;
+  text-align: center;
+  top: 0;
 }
 
 /****************
@@ -113,7 +179,7 @@ Navigation
   margin-left: 10em;
 }
 
-@media screen and (max-width: 975px) {
+@media screen and (max-width: 60.9em) {
   .mainContainer {
     margin-left: 0;
   }
