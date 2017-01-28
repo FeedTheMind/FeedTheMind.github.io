@@ -1,10 +1,9 @@
 $(document).ready(function(){
-  $('.example').slick({
+  $('.slideContainer').slick({
+    mobileFirst: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
+    autoplay: false,
     arrows: false,
-    speed: 2000,
   });
 });
