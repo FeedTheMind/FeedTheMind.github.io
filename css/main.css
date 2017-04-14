@@ -1,20 +1,19 @@
 /****************
 General
 ****************/
+@import url('https://fonts.googleapis.com/css?family=Alice');
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+
 *,
 *:before,
 *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Lora', Georgia, sans-serif;
-}
-
-p {
-  text-align: justify;
+  background: #5bc0de;
 }
 
 a,
@@ -22,6 +21,24 @@ a:hover,
 a:focus {
   text-decoration: none;
   outline: none;
+}
+
+section {
+  background: #fff;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, .5);
+}
+
+section:last-child {
+  border-bottom: 1rem solid #5bc0de;
+}
+
+.love {
+  color: rgba(178, 34, 34, 1);
+}
+
+/* Make #about an exaggerated number, as setInterval will adjust */
+#about {
+  margin-top: 100vh;
 }
 
 /****************
@@ -34,7 +51,7 @@ Navigation
   top: .6em;
   background: transparent;
   border: 0;
-  display:none;
+  display: none;
   cursor: pointer;
 }
 
@@ -66,6 +83,7 @@ Navigation
   padding: 5px 5px 0 5px;
   letter-spacing: .07em;
   font-size: 1.2em;
+  -webkit-transition: .4s;
   transition: .4s;
   color: rgba(153, 153, 153, 1);
   width: 100%;
@@ -74,15 +92,17 @@ Navigation
 
 .navLink:hover,
 .navLink:focus {
-  color: royalblue;
+  color: rgba(65, 105, 225, 1);
   letter-spacing: .14em;
 }
 
-.mainText {
+.mainText,
+footer a {
+  -webkit-transition: .8s;
   transition: .8s;
   letter-spacing: .07em;
   font-weight: bold;
-  color: firebrick;
+  color: rgba(178, 34, 34, 1);
   padding-left: 5px;
   width: 100%;
   display: block;
@@ -94,19 +114,11 @@ Navigation
   }
 
 @media screen and (max-width: 60.9rem) {
-  .mainContainer {
-    padding-top: 3em;
-  }
-
   .slideDown {
     display: block;
     z-index: 1100;
   }
-
-  .menuList::-webkit-scrollbar {
-    display: none;
-  }
-
+  
   .navMenu {
     left: 0;
     width: 100%;
@@ -144,39 +156,39 @@ Navigation
 .slickSlider
 ****************/
 .slideContainer {
-  margin-left: -1em;
+  margin-top: -13%;
 }
 
-.slickSlider img {
+.slideContainer img {
   width: 100%;
   margin: 0 auto;
 }
 
-.slickSlider:hover {
-  cursor: w-resize;
-}
-
-.slickSlider {
-  /* Make relative so "text" can be positioned */
-    /* Or use drawing software to alter personReading */
-  position: relative;
-}
-
-.textForImages {
-  position: absolute;
+/****************
+.slideWrap
+****************/
+.slideWrap {
+  position: fixed;
+  top: 50px;
   width: 100%;
-  z-index: 1;
-  color: #fff;
-  font-size: 20em;
-  text-align: center;
-  top: 0;
+  z-index: -30;
+}
+
+@media screen and (min-width: 60.9em) {
+  .slideWrap {
+    top: 0;
+    left: 25%;
+    border: 10px solid #fff;
+    width: 60%;
+  }
 }
 
 /****************
 .mainContainer
 ****************/
 .mainContainer {
-  margin-left: 10em;
+  margin-left: 9.4em;
+  background: rgba(178, 34, 34, 1);
 }
 
 @media screen and (max-width: 60.9em) {
@@ -186,5 +198,330 @@ Navigation
 }
 
 /****************
-Queries, General
+footer
 ****************/
+footer {
+  text-align: center;
+  background: #fff;
+  padding-top: 5px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/****************
+main (.inner)
+****************/
+.inner main {
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  font-size: 1.1em;
+  font-weight: 700;
+  line-height: 1.75em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+        flex-direction: column;
+
+  -webkit-box-align: center;
+    -ms-flex-align: center;
+      align-items: center;
+
+  -webkit-box-pack: center;
+    -ms-flex-pack: center;
+      justify-content: center;
+
+  text-align: center;
+}
+
+section h1 {
+  font-weight: bold;
+  color: rgba(0, 0, 0, .75);
+  padding-top: 5px;
+}
+
+.intro {
+  padding: 0 25px;
+}
+
+@media screen and (min-width: 60.9em) {
+  .inner main {
+    /*padding: 0;*/
+    width: 75%;
+  }
+
+  .intro {
+    padding: 0;
+  }
+}
+
+/****************
+Skills
+****************/
+.iconWrapper i {
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-size: 2.5em;
+}
+
+.devicons-javascript_badge {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.devicons-javascript_badge:hover {
+  color: rgba(255, 255, 80, 1);
+  background:rgba(0, 0, 0, .85);
+}
+
+.devicons-html5:hover,
+.devicons-git:hover {
+  color: #ff8000;
+}
+
+.devicons-css3:hover,
+.devicons-jquery:hover {
+  color: rgba(65, 105, 225, 1);
+}
+
+.devicons-mongodb:hover {
+  color: rgba(0, 128, 0, 1);
+}
+
+.devicons-nodejs_small:hover {
+  color: rgba(0, 128, 64, 1);
+}
+
+.devicons-angular:hover {
+  color: rgba(178, 34, 34, .85);
+}
+
+.devicons-python:hover {
+  color: rgba(255, 255, 80, 1);
+  background: rgba(65, 105, 225, 1);
+  border-radius: 50%;
+}
+
+.devicon-csharp-plain:hover {
+  color: rgba(128, 0, 128, 1);
+}
+
+@media screen and (min-width: 400px) {
+  .iconWrapper i {
+    font-size: 3em;
+  }
+}
+
+/****************
+Portfolio
+****************/
+.portfolioWrapper {
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+figure {
+  position: relative;
+  width: 275px;
+}
+
+figure div {
+  border: 5px solid rgba(178, 34, 34, 1);
+  background: rgba(0, 0, 0, .85);
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Gloria Hallelujah', Georgia, sans-serif;
+  font-size: 1.25em;
+  padding: 5px 0;
+  -webkit-transition: background .5s;
+  transition: background .5s;
+  margin: 1px;
+}
+
+figure div:hover {
+  background: rgba(0, 0, 0, 1);
+}
+
+figure i {
+  position: absolute;
+  top: -11px;
+  right: -11px;
+  padding: 10px;
+  color: rgba(255, 255, 255, .65);
+  font-size: 1.5em;
+  -webkit-transition: color .5s;
+  transition: color .5s;
+}
+
+figure i:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+figure a div,
+figure a i {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+figure a:focus div,
+figure a:focus i {
+  color: rgba(91, 192, 222, 1);
+}
+
+@media screen and (min-width: 60.9em) {
+  figure div {
+    font-size: 1.3em;
+  }
+
+  figure i {
+    font-size: 1.6em;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .portfolioWrapper {
+    width: 70%;
+  }
+}
+
+/****************
+Contact
+****************/
+form {
+  width: 100%;
+}
+
+.inputWrapper {
+  background: rgba(178, 34, 34, .85);
+  max-width: 650px;
+  border-radius: 5px;
+  width: 95%;
+  margin: 25px auto 0;
+  height: 50px;
+}
+
+.inputWrapper label {
+  color: rgba(255, 255, 255, 1);
+  width: 30%;
+  float: left;
+  padding-top: 10px;
+}
+
+.inputWrapper input {
+  width: 65%;
+  height: 100%;
+  color: rgba(0, 0, 0, .65);
+  padding: 10px;
+  font-size: 1.3em;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-family: 'Lora', 'Georgia', sans-serif;
+  border-radius: 5px;
+}
+
+.message {
+  height: 225px
+}
+
+.inputWrapper button {
+  color: rgba(255, 255, 255, 1);
+  background: none;
+  border: 2px solid rgba(0, 0, 0, .27);
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+  font-family: 'Lora', 'Georgia', sans-serif;
+  cursor: pointer;
+  -webkit-transition: 1s;
+  transition: 1s;
+  outline: none;
+  border-radius: 5px;
+}
+
+.inputWrapper:last-child {
+  margin-bottom: 10px;
+}
+
+.inputWrapper button:hover,
+.inputWrapper button:focus {
+  background: rgba(178, 34, 34, 1);
+}
+
+textarea {
+  resize: none;
+  height: 100%;
+  width: 65%;
+  color: rgba(0, 0, 0, .65);
+  padding: 10px;
+  font-size: 1.3em;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-family: 'Lora', 'Georgia', sans-serif;
+}
+
+textarea:focus,
+.inputWrapper input:focus {
+  width: 70%;
+  color: rgba(0, 0, 0, 1);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.toggle {
+  -webkit-transition: 1s;
+  transition: 1s;
+  background: rgba(178, 34, 34, 1);
+}
+
+.iconWrapper a {
+  color: rgba(0, 0, 0, .85);
+  padding: 0 7px;
+}
+
+.iconWrapper a:focus,
+.iconWrapper a:hover {
+  color: rgba(1, 76, 140, 1);
+}
+
+/****************
+General Queries
+****************/
+@media screen and (min-width: 60.9em) {
+  section h1 {
+    padding-left: 9px;
+  }
+
+  footer div {
+    margin-left: 75px;
+  }
+
+  .iconWrapper i {
+    font-size: 4.5em;
+    margin-right: 10px;
+  }
+
+  .slideContainer {
+    margin-top: -15%;
+  }
+}
+
+@media screen and (max-width: 60.9em) {
+  section h1 {
+    text-align: center;
+  }
+}

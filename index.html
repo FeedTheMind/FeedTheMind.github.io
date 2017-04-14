@@ -1,63 +1,165 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='en' id='home'>
   <head>
     <title>FeedTheMind | Hungry for Knowledge</title>
     <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css' integrity='sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ' crossorigin='anonymous'>
     <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN' crossorigin='anonymous'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css'>
+    <link rel="stylesheet" href='https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/fonts/devicons.svg'>
     <link rel='stylesheet' href='slick/slick.css'/>
-    <link rel='stylesheet' href='slick/slick-theme.css'>
-    <link href='https://fonts.googleapis.com/css?family=Alice' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,400i' rel='stylesheet'>
+    <!--<link rel='stylesheet' href='slick/slick-theme.css'>-->
     <link rel='stylesheet' href='css/main.css'>
   </head>
-  <!-- Add home id for smooth-scroll -->
-  <body id='home' class='bg-info'>
-
+  
+  <body>
     <nav id='navbar' class='navMenu'>
-      <a class='mainText' href='https://feedthemind.github.io/'>FeedTheMind</a>
+      <a class='mainText' href='https://github.com/feedthemind/'>FeedTheMind</a>
       <button class='slideDown'><i class='fa fa-bars fa-2x'></i></button>
       <ul class='menuList'>
         <li class='navItem'><a class='navLink' href='#home'>Home</a></li>
         <li class='navItem'><a class='navLink' href='#about'>About</a></li>
+        <li class='navItem'><a class='navLink' href='#skills'>Skills</a></li>
         <li class='navItem'><a class='navLink' href='#portfolio'>Portfolio</a></li>
         <li class='navItem'><a class='navLink' href='#contact'>Contact</a></li>
       </ul>
     </nav>
 
     <div class='mainContainer'>
-
-      <section class='slideContainer'>
-        <div class='slickSlider'>
-          <img src='img/personReading.png' alt='Person holding open book up to face'>
-          <div class='textForImages'>
-            <h1>Never . . .</h1>
+      <div class ='slideWrap'>
+        <div class='slideContainer'>
+          <div class='slickSlider'>
+            <img src='img/personReading1.png' alt='Person holding open book up to face'>
           </div>
-        </div>
-
-        <div class='slickSlider'>
-          <img src='img/personReading.png' alt='Person holding open book up to face'>
-          <div class='textForImages'>
-            <h1>Stop . . .</h1>
+          <div class='slickSlider'>
+            <img src='img/personReading2.png' alt='Person holding open book up to face'>
           </div>
-        </div>
-
-        <div class='slickSlider'>
-          <img src='img/personReading.png' alt='Person holding open book up to face'>
-          <div class='textForImages'>
-            <h1>Learning.</h1>
+          <div class='slickSlider'>
+            <img src='img/personReading3.png' alt='Person holding open book up to face'>
           </div>
-        </div>
-      </section> <!-- .slideContainer -->
+        </div> <!-- .slideContainer -->
+      </div> <!-- .slideWrap -->
 
+      <section id='about' class='inner'>
+        <h1 class='helloHolder'></h1>
+        <main>
+          <div class='intro'>
+            <p>My "name" is MR. 7. (It's a silly story that I like sharing—I'll fill you in when we meet.) In a nutshell, I <span class='love'>love</span> learning. So if my nose isn't buried in a book, I'm probably studying code or experimenting with new coding concepts.</p>
+            <p>I have a diverse skill set: customer service, sales, English, communications, nursing, and (now) programming. I'm very passionate about sharing knowledge that I've acquired, and look forward to applying my experiences and skills to help strengthen those around me—that includes you and your team!</p> 
+            <p>If you'd like to get in touch or have a burning question, feel free to use the contact form.</p>
+            <p>I look forward to hearing from you, and can't wait to see what we can build together.</p>
+            <p>Never Stop Learning</p>
+          </div>
+        </main>
+      </section>
+
+      <section id='skills' class='inner'>
+        <h1>Skills</h1>
+        <main>
+          <div class='iconWrapper'>
+            <i class='devicons devicons-javascript_badge'></i>
+            <i class='devicons devicons-html5'></i>
+            <i class='devicons devicons-css3'></i>
+            <i class='devicons devicons-jquery'></i>
+            <i class='devicons devicon-csharp-plain'></i>
+          </div>
+
+          <div class='iconWrapper'>
+            <i class='devicons devicons-python'></i>
+            <i class='devicons devicons-mongodb'></i>
+            <i class='devicons devicons-angular'></i>
+            <i class='devicons devicons-nodejs_small'></i>
+            <i class='devicons devicons-git'></i>
+          </div>
+        </main>
+      </section>
+
+      <section id='portfolio' class='inner'>
+        <h1>Portfolio</h1>
+        <main>
+          <div class='portfolioWrapper'>
+            <figure>
+              <a href='https://feedthemind.github.io/funWithWiki'><div>Fun with Wiki</div></a>
+              <a href='https://github.com/FeedTheMind/funWithWiki/tree/gh-pages'><i class='devicons devicons-github_badge'></i></a>
+            </figure>
+            <figure>
+              <a href='https://feedthemind.github.io/solidSnake'><div>Solid Snake</div></a>
+              <a href='https://github.com/FeedTheMind/solidSnake'><i class='devicons devicons-github_badge'></i></a>
+            </figure>
+            <figure>
+              <a href='https://feedthemind.github.io/mayTheForce'><div>May the Force</div></a>
+              <a href='https://github.com/feedthemind/maytheforce/tree/gh-pages'><i class='devicons devicons-github_badge'></i></a>
+            </figure>
+            <figure>
+              <a href='https://feedthemind.github.io/triggerFinger'><div>Trigger Finger</div></a>
+              <a href='https://github.com/FeedTheMind/triggerFinger'><i class='devicons devicons-github_badge'></i></a>
+            </figure>
+            <figure>
+              <a href='https://feedthemind.github.io/spreadTheGroove'><div>Spread the Groove</div></a>
+              <a href='https://github.com/FeedTheMind/spreadTheGroove'><i class='devicons devicons-github_badge'></i></a>
+            </figure>
+            <figure>
+              <a href='https://feedthemind.github.io/circleColorChanger'><div>Circle Color Changer</div></a>
+              <a href='https://github.com/FeedTheMind/circleColorChanger'><i class='devicons devicons-github_badge'></i></a>
+            </figure>
+            <figure>
+              <a href='https://feedthemind.github.io/quoteGenerator'><div>Quote Generator</div></a>
+              <a href='https://github.com/FeedTheMind/quoteGenerator'><i class='devicons devicons-github_badge'></i></a>
+            </figure>
+            <figure>
+              <a href='https://github.com/FeedTheMind/SignaturePieces'><div>Signature Pieces</div></a>
+              <a href='https://github.com/FeedTheMind/SignaturePieces'><i class='devicons devicons-github_badge'></i></a>
+            </figure>
+            <figure>
+              <a href='https://github.com/FeedTheMind/exercise_playground'><div>Exercise Playground</div></a>
+              <a href='https://github.com/FeedTheMind/exercise_playground'><i class='devicons devicons-github_badge'></i></a>
+            </figure>
+          </div> <!-- .portfolioWrapper -->
+        </main>
+      </section>
+
+      <section id='contact' class='inner'>
+        <h1>Contact</h1>
+        <main>
+          <form action='https://formspree.io/feedyourideas@gmail.com' method='post'>
+            <div class='inputWrapper'>
+              <label>Name</label> 
+              <input name='name' type='text' placeholder='. . .' required>
+            </div>
+            <div class='inputWrapper'>
+              <label>E-mail</label> 
+              <input name='_replyto' type='email' placeholder='. . .' required>
+            </div>
+            <div class='inputWrapper'>
+              <label>Subject</label> 
+              <input name='_subject' type='text' placeholder='. . .' required>
+            </div>
+            <div class='inputWrapper message'>
+              <label>Message</label>
+              <textarea name='user_message' placeholder='. . .'></textarea>
+            </div>
+            <div class='inputWrapper'>
+              <button type='submit'>Submit</button>
+            </div>
+          </form>
+
+          <div class='iconWrapper'>
+            <a href='mailto:feedyourideas@gmail.com'><i class='fa fa-envelope' aria-hidden='true'></i></a>
+            <a href='https://github.com/feedthemind'><i class='fa fa-github' aria-hidden='true'></i></a>
+          </div>
+        </main>
+      </section>
     </div> <!-- .mainContainer -->
-
+    
+    <footer>
+      <div>
+        <a href='https://github.com/feedthemind' title='Never Stop Learning'>FeedTheMind &copy; <span class='dateYear'></span></a>
+      </div>
+    </footer>
     <script src='https://code.jquery.com/jquery-3.1.1.min.js' integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=' crossorigin='anonymous'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js' integrity='sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb' crossorigin='anonymous'></script>
-    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js' integrity='sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn' crossorigin='anonymous'></script>
     <script src='slick/slick.min.js'></script>
-    <script src='js/smooth-scroll.js'></script>
     <script src='js/slickSlide.js'></script>
     <script src='js/app.js'></script>
   </body>
@@ -67,12 +169,18 @@
 
 <!--
   'Fix' menu to right (or left) = check
-    Style above menu =
+    Style above menu = check
     Incorporate transition = check
 
   Create working "slick" = check
-  Incorporate smooth scroll =
+  Incorporate smooth scroll = check
   Add a carousel of images = check
-    Adjust sizes of said images =
+    Adjust sizes of said images = check
 
+  Structure HTML skeleton = check
+  Make responsive = check
+
+  Populate About section with "hello" from around the world = check
+
+  Stick with a simple (minimal) color theme = check
  -->
