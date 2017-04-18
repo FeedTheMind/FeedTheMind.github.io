@@ -6,30 +6,44 @@ var rename = require('gulp-rename');
 var htmlbuild = require('gulp-htmlbuild');
 var ghPages = require('gulp-gh-pages');
 var babel = require('gulp-babel');
+var maps = require('gulp-sourcemaps');
+var del = require('del');
 
 
 gulp.task('js', function () {
-  gulp.src('js/*.js')
+  return gulp.src('js/*.js')
+    .pipe(maps.init())
     .pipe(babel())
     .pipe(concat('all.js'))
     .pipe(uglify())
+    .pipe(rename('all.min.js'))
+    .pipe(maps.write('../maps'))
     .pipe(gulp.dest('dist'));
 });
 
 
 gulp.task('css', function () {
-  gulp.src('css/*.css')
+  return gulp.src('css/*.css')
     .pipe(minify())
-    .pipe(rename('all.css'))
+    .pipe(rename('all.min.css'))
     .pipe(gulp.dest('dist'));
 });
 
 
-gulp.task('default', ['js', 'css'], function () {
+gulp.task('build', ['js', 'css'], function () {
   console.log('The CSS and JS files have been updated.');
 });
 
 
 gulp.task('watch', function () {
-  gulp.watch(['js/*', 'css/*'], ['default']);
+  gulp.watch('js/*.js', ['js']);
+  gulp.watch('css/*.css', ['css']);
+});
+
+
+gulp.task('default', ['build']); // Single Gulp task "builds" site
+
+
+gulp.task('clean', function () {
+  del('dist');
 });
