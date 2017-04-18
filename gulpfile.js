@@ -66,6 +66,8 @@ gulp.task('assets', function(){
 
 gulp.task('build', ['assets', 'html'], function () {
   console.log('Clean build: Finished');
+  return gulp.src('README.md')
+    .pipe(gulp.dest('dist'));
 });
 
 
